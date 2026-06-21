@@ -30,7 +30,7 @@ This project contains two main operating modes:
 
 ## System Architecture
 
-
+```text
 Camera
   ↓
 Raspberry Pi 5
@@ -46,7 +46,7 @@ B&R PLC
 Delta Robot Motion Control
   ↓
 Pick-and-Place / Tracking Operation
-
+```
 
 
 ## Hardware Connection
