@@ -61,6 +61,17 @@ Pick-and-Place / Tracking Operation
 | Ethernet | Used for Raspberry Pi to PLC communication |
 
 
+## Software Requirements
+
+- Python
+- OpenCV
+- NumPy
+- pymodbus
+- B&R Automation Studio
+- Modbus TCP/IP
+
+
+
 ## Modbus Communication Mapping
 
 | Register / Signal | Purpose |
