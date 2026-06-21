@@ -30,7 +30,7 @@ This project contains two main operating modes:
 
 ## System Architecture
 
----text
+```text
 Camera
   ↓
 Raspberry Pi 5
