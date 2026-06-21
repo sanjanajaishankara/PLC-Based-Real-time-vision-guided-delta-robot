@@ -70,8 +70,6 @@ Pick-and-Place / Tracking Operation
 - B&R Automation Studio
 - Modbus TCP/IP
 
-
-
 ## Modbus Communication Mapping
 
 | Register / Signal | Purpose |
