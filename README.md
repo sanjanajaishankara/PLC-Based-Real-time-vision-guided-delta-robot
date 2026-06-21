@@ -79,6 +79,7 @@ The detected pixel coordinates are converted into robot workspace coordinates us
 ```text
 Robot_X = a1 × Pixel_X + a2 × Pixel_Y + a3
 Robot_Y = b1 × Pixel_X + b2 × Pixel_Y + b3
+```
 
 ## Limitations
 
