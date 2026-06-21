@@ -30,7 +30,7 @@ This project contains two main operating modes:
 
 ## System Architecture
 
-```text
+
 Camera
   ↓
 Raspberry Pi 5
@@ -49,9 +49,6 @@ Pick-and-Place / Tracking Operation
 
 
 
-## Add hardware connection section
-
-```markdown
 ## Hardware Connection
 
 | Component | Connection / Role |
