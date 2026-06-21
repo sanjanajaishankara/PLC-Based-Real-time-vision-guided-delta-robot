@@ -17,7 +17,7 @@ The main objective of this project is to detect an object using computer vision,
 
 ## Project Overview
 
-The system uses machine vision to detect circular objects from camera images. The detected object center is converted from pixel coordinates into robot workspace coordinates using calibration and coordinate transformation.
+The system uses machine vision to detect circular objects from camera images. The detected object center is converted from pixel coordinates into robot workspace coordinates using calibration and coordinate transformation called affine transformation.
 
 The calculated coordinates are transferred from the Raspberry Pi to the B&R PLC through Modbus TCP/IP. Based on the received command and coordinates, the PLC controls the Delta Robot movement.
 
