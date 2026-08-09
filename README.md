@@ -50,33 +50,24 @@ The system integrates the following major components:
 
 ## System Workflow
 
-The overall information flow of the system is:
+The overall information flow of the developed system is shown below:
 
-Camera
-   ↓
-Raspberry Pi 5
-   ↓
-Python + OpenCV
-   ↓
-Image Pre-processing
-   ↓
-Object Detection / Tracking
-   ↓
-Centre Coordinate Extraction
-   ↓
-Pixel-to-Robot Coordinate Transformation
-   ↓
-Modbus TCP/IP
-   ↓
-B&R PLC
-   ↓
-Coordinate Validation
-   ↓
-Robot Motion Control
-   ↓
-Delta Robot
-   ↓
-Vacuum Gripper
+```mermaid
+flowchart TD
+    A[Camera] --> B[Raspberry Pi 5]
+    B --> C[Python and OpenCV]
+    C --> D[Image Acquisition and Pre-processing]
+    D --> E[Object Detection or Object Tracking]
+    E --> F[Centre Coordinate Extraction]
+    F --> G[Pixel-to-Robot Coordinate Transformation]
+    G --> H[Modbus TCP/IP Communication]
+    H --> I[B&R PLC]
+    I --> J[Coordinate and Workspace Validation]
+    J --> K[Robot Motion Control]
+    K --> L[Delta Robot]
+    L --> M[Vacuum Gripper]
+    M --> N[Object Pick, Transfer and Release]
+```
 
 
 ## Vision Processing
