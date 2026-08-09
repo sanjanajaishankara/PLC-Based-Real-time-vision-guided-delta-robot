@@ -117,31 +117,38 @@ filtering.
 
 ## Object Tracking
 
-A separate **eye-to-hand camera** configuration is used for object tracking.
+A separate **eye-to-hand camera** configuration is used for real-time object
+tracking.
 
-Unlike the pick-and-place application, where the object position is obtained
-before robot movement, the tracking system repeatedly calculates the object
-position.
+Unlike the pick-and-place application, where the object position is detected
+before the robot begins its motion, the tracking application continuously
+captures image frames and repeatedly updates the detected object position.
 
-The tracking pipeline is:
+The object-tracking workflow is shown below:
 
-Camera
-   ↓
-Object Detection
-   ↓
-Contour Extraction
-   ↓
-Ellipse Fitting
-   ↓
-Object Centre
-   ↓
-Coordinate Filtering
-   ↓
-X-Y Position Update
-   ↓
-PLC
-   ↓
-Delta Robot
+```mermaid
+flowchart TD
+    A[Eye-to-Hand Camera] --> B[Continuous Image Acquisition]
+    B --> C[Image Pre-processing]
+    C --> D[Contour Extraction]
+    D --> E[Ellipse Fitting]
+    E --> F[Object Centre Coordinate Extraction]
+    F --> G[Moving-Average Coordinate Filtering]
+    G --> H[Pixel-to-Robot Coordinate Transformation]
+    H --> I[Workspace Limit Validation]
+    I --> J[Update X-Y Robot Coordinates]
+    J --> K[Modbus TCP/IP Communication]
+    K --> L[B&R PLC]
+    L --> M[Coordinate Validation]
+    M --> N[Delta Robot Position Update]
+    N --> B
+```
+
+The object's centre coordinates are continuously recalculated and transmitted
+to the B&R PLC. The PLC validates the received coordinates and updates the
+Delta robot position within the permitted workspace. The robot follows the
+object in the **X and Y directions**, while the Z-axis remains at a predefined
+safe tracking height.
 
 The object's position is continuously updated so that the robot can react
 to changes in its location within the defined workspace.
