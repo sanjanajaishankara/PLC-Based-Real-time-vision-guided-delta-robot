@@ -305,20 +305,21 @@ The main contributions of the project include:
 ## Repository Structure
 
 ```text
-.
+Real-time-vision-guided-delta-robot/
+│
 ├── pick-and-place/
-│   ├── python/
-│   └── plc/
+│   ├── python/                 # Python vision and Modbus communication code
+│   └── plc/                    # B&R PLC programs for pick-and-place control
 │
 ├── object-tracking/
-│   ├── python/
-│   └── plc/
+│   ├── python/                 # Real-time object detection and tracking
+│   └── plc/                    # PLC programs for vision-guided robot tracking
 │
-├── images/
+├── images/                     # Images of setup, experiments, and results
 │
-├── docs/
+├── docs/                       # Project and technical documentation
 │
-├── videos/
+├── videos/                     # Demonstration and testing videos
 │
-├── requirements.txt
-└── README.md
+├── requirements.txt            # Required Python packages
+└── README.md                   # Project overview and instructions
