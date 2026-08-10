@@ -133,7 +133,7 @@ sequence.
 
 The object-tracking workflow is shown below:
 
-<img src="Images/object_tracking_flowchart.png" width="720">
+<img src="Images/object_tracking_pick_flowchart.png" width="720">
 
 The object's centre coordinates are continuously recalculated and transmitted
 to the B&R PLC. The PLC validates the received coordinates and updates the
