@@ -68,7 +68,7 @@ The system integrates the following major components:
 
 The overall information flow of the developed system is shown below:
 
-<img src="Images/pick_place_flowchart.png" width="520">
+<img src="Images/pick_place_flowchart.png" width="720">
 
 ## Vision Processing
 
@@ -133,7 +133,7 @@ sequence.
 
 The object-tracking workflow is shown below:
 
-<img src="Images/object_tracking_flowchart.png" width="220">
+<img src="Images/object_tracking_flowchart.png" width="720">
 
 The object's centre coordinates are continuously recalculated and transmitted
 to the B&R PLC. The PLC validates the received coordinates and updates the
