@@ -31,12 +31,21 @@ Two independent vision-guided applications were developed:
    - Transfers updated coordinates to the PLC.
    - Allows the Delta robot to respond to changes in object position.
   
-# Demonstration Videos
+## Demonstration Videos
 
 The QR codes below provide access to demonstration videos of the implemented system.
 
-- `pickplace.png` – Vision-guided pick-and-place demonstration
-- `tracking.png` – Real-time object tracking demonstration
+### Vision-Guided Pick-and-Place
+
+Scan the QR code below to view the demonstration of the automated vision-guided pick-and-place operation.
+
+<img src="Images/pickplace.png" width="220">
+
+### Real-Time Object Tracking
+
+Scan the QR code below to view the demonstration of the real-time object tracking and pick-and-place operation.
+
+<img src="Images/tracking.png" width="220">
 
 
 ## System Architecture
