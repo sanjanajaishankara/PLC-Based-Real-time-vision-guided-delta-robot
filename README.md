@@ -68,7 +68,7 @@ The system integrates the following major components:
 
 The overall information flow of the developed system is shown below:
 
-<img src="Images/pick_place.png" width="220">
+<img src="Images/pick_place_flowchart.png" width="220">
 
 ## Vision Processing
 
@@ -133,23 +133,7 @@ sequence.
 
 The object-tracking workflow is shown below:
 
-```mermaid
-flowchart TD
-    A[Eye-to-Hand Camera] --> B[Continuous Image Acquisition]
-    B --> C[Image Pre-processing]
-    C --> D[Contour Extraction]
-    D --> E[Ellipse Fitting]
-    E --> F[Object Centre Coordinate Extraction]
-    F --> G[Moving-Average Coordinate Filtering]
-    G --> H[Pixel-to-Robot Coordinate Transformation]
-    H --> I[Workspace Limit Validation]
-    I --> J[Update X-Y Robot Coordinates]
-    J --> K[Modbus TCP/IP Communication]
-    K --> L[B&R PLC]
-    L --> M[Coordinate Validation]
-    M --> N[Delta Robot Position Update]
-    N --> B
-```
+<img src="Images/object_tracking_flowchart.png" width="220">
 
 The object's centre coordinates are continuously recalculated and transmitted
 to the B&R PLC. The PLC validates the received coordinates and updates the
