@@ -68,7 +68,7 @@ The system integrates the following major components:
 
 The overall information flow of the developed system is shown below:
 
-<img src="Images/pick_place_flowchart.png" width="220">
+<img src="Images/pick_place_flowchart.png" width="520">
 
 ## Vision Processing
 
