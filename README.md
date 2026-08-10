@@ -294,21 +294,6 @@ performed reliably under suitable illumination conditions.
 | Average response time | 45 ms |
 | Maximum response time | 70 ms |## Experimental Results
 
-| Test | Result |
-|---|---|
-| Pick-and-place trials | 50 |
-| Successful picks | 50 |
-| Pick-and-place success rate | 100% |
-| Average cycle time | 22.2 s |
-| Tracking tests | 30 |
-| Tracking success rate | 98% |
-| Average tracking position error | 2.5 mm |
-| Maximum tracking position error | 4.0 mm |
-| Modbus messages tested | 100 |
-| Communication success rate | 100% |
-| Average response time | 45 ms |
-| Maximum response time | 70 ms |
-
 
 ## Key Contributions
 
