@@ -68,23 +68,7 @@ The system integrates the following major components:
 
 The overall information flow of the developed system is shown below:
 
-```mermaid
-flowchart TD
-    A[Camera] --> B[Raspberry Pi 5]
-    B --> C[Python and OpenCV]
-    C --> D[Image Acquisition and Pre-processing]
-    D --> E[Object Detection or Object Tracking]
-    E --> F[Centre Coordinate Extraction]
-    F --> G[Pixel-to-Robot Coordinate Transformation]
-    G --> H[Modbus TCP/IP Communication]
-    H --> I[B&R PLC]
-    I --> J[Coordinate and Workspace Validation]
-    J --> K[Robot Motion Control]
-    K --> L[Delta Robot]
-    L --> M[Vacuum Gripper]
-    M --> N[Object Pick, Transfer and Release]
-```
-
+<img src="Images/pick_place.png" width="220">
 
 ## Vision Processing
 
