@@ -366,6 +366,42 @@ If import fails with `ModuleNotFoundError`, check:
 - package init file is named exactly `src/delta_vision_lib/__init__.py`
 - folder name is exactly `delta_vision_lib`
 
+- ## Using the Code as a Python Module
+
+This repository uses the `src/` package layout.
+
+### Install (editable mode)
+
+```bash
+pip install -e .
+```
+
+### Import in Python
+
+```python
+from delta_vision_lib import DeltaVisionSystem, cal
+print(cal(10, 20))
+```
+
+### Run demo
+
+```bash
+python examples/run_demo.py
+```
+
+### Package structure
+
+```text
+src/
+  delta_vision_lib/
+    __init__.py
+    search.py
+    calibration.py
+    plc.py
+    vision.py
+    runtime.py
+```
+
 
 ## Repository Structure (Updated)
 
