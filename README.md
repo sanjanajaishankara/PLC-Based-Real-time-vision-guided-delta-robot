@@ -310,6 +310,63 @@ The main contributions of the project include:
 - Experimental validation of vision, communication, tracking, and positioning
 
 
+## Run as a Python module/library
+
+This project is structured using the `src/` layout, so code can be imported as a package.
+
+### 1) Install in editable mode
+
+From repository root:
+
+```bash
+pip install -e .
+```
+
+Editable mode (`-e`) means local code changes are immediately available without reinstalling.
+
+### 2) Import module in Python
+
+```python
+from delta_vision_lib import cal
+print(cal(10, 20))
+```
+
+You can also import specific components:
+
+```python
+from delta_vision_lib.calibration import Calibration
+from delta_vision_lib.plc import PLCClient
+from delta_vision_lib.vision import VisionSystem
+from delta_vision_lib.runtime import DeltaVisionSystem
+```
+
+### 3) Run a demo script
+
+```bash
+python examples/run_demo.py
+```
+
+### 4) Run a one-line module test
+
+```bash
+python -c "from delta_vision_lib import cal; print(cal(10,20))"
+```
+
+Expected output:
+
+```text
+30
+```
+
+### 5) Common issue
+
+If import fails with `ModuleNotFoundError`, check:
+
+- you ran `pip install -e .` from repo root
+- package init file is named exactly `src/delta_vision_lib/__init__.py`
+- folder name is exactly `delta_vision_lib`
+
+
 ## Repository Structure
 
 ```text
