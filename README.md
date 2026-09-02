@@ -367,24 +367,28 @@ If import fails with `ModuleNotFoundError`, check:
 - folder name is exactly `delta_vision_lib`
 
 
-## Repository Structure
+## Repository Structure (Updated)
 
 ```text
-Real-time-vision-guided-delta-robot/
+PLC-Based-Real-time-vision-guided-delta-robot/
 │
-├── pick-and-place/
-│   ├── python/                 # Python vision and Modbus communication code
-│   └── plc/                    # B&R PLC programs for pick-and-place control
+├── PickPlace/                  # Existing pick-and-place PLC/logic assets
+├── Tracking/                   # Existing tracking PLC/logic assets
+├── Images/                     # Setup/result images
+├── Videos/                     # Demo videos
+├── docs/                       # Project documents
 │
-├── object-tracking/
-│   ├── python/                 # Real-time object detection and tracking
-│   └── plc/                    # PLC programs for vision-guided robot tracking
+├── src/
+│   └── delta_vision_lib/       # Python library package
+│       ├── __init__.py
+│       ├── search.py
+│       ├── calibration.py
+│       ├── plc.py
+│       ├── vision.py
+│       └── runtime.py
 │
-├── images/                     # Images of setup, experiments, and results
-│
-├── docs/                       # Project and technical documentation
-│
-├── videos/                     # Demonstration and testing videos
-│
-├── requirements.txt            # Required Python packages
-└── README.md                   # Project overview and instructions
+├── pyproject.toml              # Python packaging config (module install)
+├── README.md                   # Project overview + module usage
+├── .gitignore
+└── LICENSE
+```
